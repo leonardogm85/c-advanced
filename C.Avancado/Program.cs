@@ -14,6 +14,9 @@
             // Modulo03.Exercicio1.Resposta.Executar();
             // Modulo03.Exercicio2.Resposta.Executar();
             // Modulo03.Exercicio3.Resposta.Executar();
+
+            // Modulo05.Exercicio1.Resposta.Executar();
+            // Modulo05.Exercicio2.Resposta.Executar();
         }
     }
 }
