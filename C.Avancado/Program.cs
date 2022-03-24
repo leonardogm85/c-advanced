@@ -24,7 +24,7 @@
             // Modulo07.Exercicio1.Resposta.Executar();
             // Modulo07.Exercicio2.Resposta.Executar();
 
-            Modulo08.Exercicio1.Resposta.Executar();
+            // Modulo08.Exercicio1.Resposta.Executar();
 
             Modulo09.Exercicio1.Resposta.Executar();
         }
