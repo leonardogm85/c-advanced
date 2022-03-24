@@ -97,11 +97,11 @@ namespace C.Avancado.Modulo08.Exercicio1
         {
             Musica musica = dao.Carregar(2)!;
 
-            musica.DefinirTitulo("Título Atualizado");
-            musica.DefinirCantor("Cantor Atualizado");
-            musica.DefinirAlbum("Album Atualizado");
-            musica.DefinirAno(2020);
-            musica.DefinirGenero(Genero.Blues);
+            musica.Titulo = "Título Atualizado";
+            musica.Cantor = "Cantor Atualizado";
+            musica.Album = "Album Atualizado";
+            musica.Ano = 2020;
+            musica.Genero = Genero.Blues;
 
             dao.Atualizar(musica);
 
@@ -163,18 +163,12 @@ namespace C.Avancado.Modulo08.Exercicio1
             Genero = genero;
         }
 
-        public int Id { get; private set; }
-        public string Titulo { get; private set; }
-        public string Cantor { get; private set; }
-        public string Album { get; private set; }
-        public int Ano { get; private set; }
-        public Genero Genero { get; private set; }
-
-        public void DefinirTitulo(string novoTitulo) => Titulo = novoTitulo;
-        public void DefinirCantor(string novoCantor) => Cantor = novoCantor;
-        public void DefinirAlbum(string novoAlbum) => Album = novoAlbum;
-        public void DefinirAno(int novoAno) => Ano = novoAno;
-        public void DefinirGenero(Genero novoGenero) => Genero = novoGenero;
+        public int Id { get; set; }
+        public string Titulo { get; set; }
+        public string Cantor { get; set; }
+        public string Album { get; set; }
+        public int Ano { get; set; }
+        public Genero Genero { get; set; }
 
         public override string ToString()
         {
@@ -202,7 +196,7 @@ namespace C.Avancado.Modulo08.Exercicio1
 
             using DbCommand command = CreateCommand(
                 connection,
-                "INSERT INTO Musica (Titulo, Cantor, Album, Ano, Genero) VALUES (@Titulo, @Cantor, @Album, @Ano, @Genero)");
+                "INSERT INTO Musicas (Titulo, Cantor, Album, Ano, Genero) VALUES (@Titulo, @Cantor, @Album, @Ano, @Genero)");
 
             CreateParameter(command, "Titulo", musica.Titulo);
             CreateParameter(command, "Cantor", musica.Cantor);
@@ -219,7 +213,7 @@ namespace C.Avancado.Modulo08.Exercicio1
 
             using DbCommand command = CreateCommand(
                 connection,
-                "UPDATE Musica SET Titulo = @Titulo, Cantor = @Cantor, Album = @Album, Ano = @Ano, Genero = @Genero WHERE Id = @Id");
+                "UPDATE Musicas SET Titulo = @Titulo, Cantor = @Cantor, Album = @Album, Ano = @Ano, Genero = @Genero WHERE Id = @Id");
 
             CreateParameter(command, "Id", musica.Id);
             CreateParameter(command, "Titulo", musica.Titulo);
@@ -237,7 +231,7 @@ namespace C.Avancado.Modulo08.Exercicio1
 
             using DbCommand command = CreateCommand(
                 connection,
-                "DELETE FROM Musica WHERE Id = @Id");
+                "DELETE FROM Musicas WHERE Id = @Id");
 
             CreateParameter(command, "Id", id);
 
@@ -250,7 +244,7 @@ namespace C.Avancado.Modulo08.Exercicio1
 
             using DbCommand command = CreateCommand(
                 connection,
-                "SELECT Id, Titulo, Cantor, Album, Ano, Genero FROM Musica WHERE Id = @Id");
+                "SELECT Id, Titulo, Cantor, Album, Ano, Genero FROM Musicas WHERE Id = @Id");
 
             CreateParameter(command, "Id", id);
 
@@ -276,7 +270,7 @@ namespace C.Avancado.Modulo08.Exercicio1
 
             using DbCommand command = CreateCommand(
                 connection,
-                "SELECT Id, Titulo, Cantor, Album, Ano, Genero FROM Musica");
+                "SELECT Id, Titulo, Cantor, Album, Ano, Genero FROM Musicas");
 
             List<Musica> musicas = new List<Musica>();
 
@@ -303,7 +297,7 @@ namespace C.Avancado.Modulo08.Exercicio1
 
             using DbCommand command = CreateCommand(
                 connection,
-                "SELECT COUNT(*) FROM Musica");
+                "SELECT COUNT(*) FROM Musicas");
 
             return (int)command.ExecuteScalar()!;
         }

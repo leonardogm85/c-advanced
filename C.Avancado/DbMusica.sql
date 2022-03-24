@@ -4,7 +4,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [DbMusica].[dbo].[Musica](
+CREATE TABLE [DbMusica].[dbo].[Musicas](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Titulo] [varchar](50) NOT NULL,
 	[Cantor] [varchar](50) NULL,
@@ -18,6 +18,6 @@ CREATE TABLE [DbMusica].[dbo].[Musica](
 ) ON [PRIMARY]
 GO
 
-DELETE FROM [DbMusica].[dbo].[Musica]
+DELETE FROM [DbMusica].[dbo].[Musicas]
 
-DBCC CHECKIDENT ('[DbMusica].[dbo].[Musica]', RESEED, 0);
+DBCC CHECKIDENT ('[DbMusica].[dbo].[Musicas]', RESEED, 0);
