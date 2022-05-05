@@ -34,6 +34,10 @@
             // Modulo11 -> C.Wpf3
             // Modulo11 -> C.Wpf4
             // Modulo11 -> C.Wpf5
+
+            // Modulo12.Exercicio1.Resposta.Executar();
+            // Modulo12.Exercicio2.Resposta.Executar();
+            Modulo12.Exercicio3.Resposta.Executar();
         }
     }
 }
