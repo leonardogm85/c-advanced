@@ -1,0 +1,23 @@
+﻿CREATE DATABASE [DbSong]
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [DbSong].[dbo].[Songs](
+  [Id] [int] IDENTITY(1,1) NOT NULL,
+  [Title] [varchar](50) NOT NULL,
+  [Singer] [varchar](50) NULL,
+  [Album] [varchar](50) NULL,
+  [Year] [int] NULL,
+  [Genre] [int] NULL,
+CONSTRAINT [PK_Song] PRIMARY KEY CLUSTERED
+(
+  [Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+DELETE FROM [DbSong].[dbo].[Songs]
+
+DBCC CHECKIDENT ('[DbSong].[dbo].[Songs]', RESEED, 0);
