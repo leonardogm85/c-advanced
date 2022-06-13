@@ -1,2 +1,2 @@
-# c-avancado
-C# Avançado
+# c-advanced
+C# Advanced
