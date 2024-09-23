@@ -17,13 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Wpf05", "C.Wpf05\C.Wpf05.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Wpf06", "C.Wpf06\C.Wpf06.csproj", "{4FF49848-ACDE-47B3-8AE8-BE90AFECBAE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.Tcp.Server", "C.Tcp.Server\C.Tcp.Server.csproj", "{25B590DF-77B9-4DB3-830F-47B8BEBD1135}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Tcp.Server", "C.Tcp.Server\C.Tcp.Server.csproj", "{25B590DF-77B9-4DB3-830F-47B8BEBD1135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.Tcp.Client", "C.Tcp.Client\C.Tcp.Client.csproj", "{D92E7E55-BC18-4227-8AC4-AC93369378A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Tcp.Client", "C.Tcp.Client\C.Tcp.Client.csproj", "{D92E7E55-BC18-4227-8AC4-AC93369378A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.Udp.Server", "C.Udp.Server\C.Udp.Server.csproj", "{26979F76-AB20-4907-9B37-23887D746E6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Udp.Server", "C.Udp.Server\C.Udp.Server.csproj", "{26979F76-AB20-4907-9B37-23887D746E6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.Udp.Client", "C.Udp.Client\C.Udp.Client.csproj", "{F9282C66-77F5-4D2E-BA41-420A106F4824}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.Udp.Client", "C.Udp.Client\C.Udp.Client.csproj", "{F9282C66-77F5-4D2E-BA41-420A106F4824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
